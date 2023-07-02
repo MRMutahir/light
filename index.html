@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>trouch</title>
+</head>
+<style>
+    body {
+        background-color: black;
+    }
+    
+    .img-size {
+        position: absolute;
+        height: 200px;
+        width: 200px;
+        left: 380px;
+        top: 20px;
+    }
+    
+    .light-size {
+        position: absolute;
+        top: 225px;
+        width: 600px;
+        left: 170px;
+    }
+    
+    .trouchmain {
+        height: 100vh;
+        width: 100vw;
+    }
+    
+    .off {
+        display: none;
+    }
+    
+    .trouch-btn {
+        padding: 20px;
+        background-color: rgb(139, 146, 146);
+        box-shadow: 10px 10px 10px white;
+        border-radius: 10px;
+    }
+    
+    .trouch-btn:hover {
+        box-shadow: none;
+    }
+</style>
+
+<body>
+    <button class="trouch-btn">On-Off</button>
+    <div class="trouchmain p-abs">
+        <div class="trouch">
+            <img class="img-size" src="./lamp.png" alt="lamp">
+            <img class="light-size active_light " src="./light.png" alt=" "></div>
+    </div>
+</body>
+<script>
+    let trouchBtn = document.querySelector('.trouch-btn');
+    let active_light = document.querySelector('.active_light');
+    console.log(active_light);
+    trouchBtn.addEventListener('click', () => {
+        document.querySelector('.active_light').classList.toggle('off')
+            // active_light.style.display = 'none'
+    })
+</script>
+
+</html>
